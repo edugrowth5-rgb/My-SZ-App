@@ -24,6 +24,7 @@ const assets = [
 
 // इंस्टॉल इवेंट: सभी फाइलों को ऑफलाइन सेव करना
 self.addEventListener('install', event => {
+   self.skipWaiting();
     event.waitUntil(
         caches.open(CACHE_NAME).then(cache => {
             console.log('Caching assets for offline use...');
