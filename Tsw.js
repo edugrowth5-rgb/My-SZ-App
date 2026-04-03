@@ -5,7 +5,7 @@
 const CACHE_NAME = 'sz-tec-v2'; // वर्जन बढ़ा दिया ताकि नया कोड लोड हो सके
 const assets = [
     './',
-    './Tindex.html',
+    './index.html',
     './Tstyle.css',
     './Tapp.js',
     './Tmanifest.json',
