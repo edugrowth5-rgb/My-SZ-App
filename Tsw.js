@@ -2,7 +2,7 @@
    Offline functionality with Cache
 */
 
-const CACHE_NAME = 'sz-tec-v1'; // वर्जन बढ़ा दिया ताकि नया कोड लोड हो सके
+const CACHE_NAME = 'sz-tec-v1'; 
 const assets = [
     './',
     './index.html',
@@ -19,7 +19,8 @@ const assets = [
     './Tfinance.js',
     './Tsoftskills.js',
     './Tdigital.js',
-    './Tfinal.js' // यह नई फाइल है, इसे जोड़ना बहुत जरूरी था
+    './Tfinal.js',
+   '1775237502348.png'
 ];
 
 // इंस्टॉल इवेंट: सभी फाइलों को ऑफलाइन सेव करना
