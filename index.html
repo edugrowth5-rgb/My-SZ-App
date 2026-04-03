@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Zone - TEC Prep</title>
+    <link rel="stylesheet" href="Tstyle.css">
+    
+    <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/education.png">
+    
+    <link rel="apple-touch-icon" href="https://img.icons8.com/color/192/education.png">
+    
+    <link rel="manifest" href="Tmanifest.json">
+    <meta name="theme-color" content="#2c3e50">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Success Zone</h1>
+            <p>TEC Certification Guide</p>
+        </header>
+        
+        <div id="welcome-screen">
+            <div class="logo-circle">SZ</div>
+            <h2>Success Zone में आपका स्वागत है</h2>
+            
+            <div class="info-box">
+                <h3>CSC - TEC परीक्षा क्या है?</h3>
+                <ul>
+                    <li><strong>कौन दे सकता है:</strong> भारतीय नागरिक जो CSC सेंटर खोलना चाहते हैं।</li>
+                    <li><strong>उपयोग:</strong> CSC ID रजिस्ट्रेशन के लिए सर्टिफिकेट अनिवार्य है।</li>
+                    <li><strong>फायदा:</strong> सरकारी और बैंकिंग सेवाएं प्रदान करने का अवसर।</li>
+                </ul>
+            </div>
+            <button class="start-app-btn" onclick="showCategories()">तैयारी शुरू करें (Start)</button>
+        </div>
+
+        <div id="category-screen" class="hidden">
+            <h3 style="text-align:center; margin-bottom:15px;">एक विषय चुनें:</h3>
+            <button class="cat-btn" onclick="startQuiz('Entrepreneurship')">उद्यमिता (Entrepreneurship)</button>
+            <button class="cat-btn" onclick="startQuiz('Economy')">भारतीय अर्थव्यवस्था</button>
+            <button class="cat-btn" onclick="startQuiz('Opportunity')">पहचान और अवसर</button>
+            <button class="cat-btn" onclick="startQuiz('Planning')">व्यवसाय योजना</button>
+            <button class="cat-btn" onclick="startQuiz('Marketing')">विपणन (Marketing)</button>
+            <button class="cat-btn" onclick="startQuiz('Accounting')">लेखांकन (Accounting)</button>
+            <button class="cat-btn" onclick="startQuiz('Legal')">कानून और टैक्स</button>
+            <button class="cat-btn" onclick="startQuiz('Finance')">वित्तीय प्रबंधन</button>
+            <button class="cat-btn" onclick="startQuiz('SoftSkills')">सॉफ्ट स्किल्स</button>
+            <button class="cat-btn" onclick="startQuiz('Digital')">डिजिटल साक्षरता</button>
+            <button class="cat-btn" style="background: var(--accent-color); color: white;" onclick="startQuiz('All')">Mixed Final Exam (All)</button>
+        </div>
+
+        <main id="game-container" class="hidden">
+            <div id="quiz-header">
+                <span id="progress">सवाल: 1/10</span>
+                <span id="score-display">स्कोर: 0</span>
+            </div>
+            <div class="card">
+                <h2 id="question">प्रश्न यहाँ लोड होगा...</h2>
+                <div id="options"></div>
+            </div>
+            <div id="quiz-controls" style="display: flex; gap: 10px; margin-top: 20px;">
+                <button id="back-btn" class="hidden" onclick="goBack()">← पीछे</button>
+                <button id="next-btn" class="hidden">अगला →</button>
+            </div>
+        </main>
+
+        <div id="result-screen" class="hidden">
+            <h2>शानदार!</h2>
+            <p id="final-stat"></p>
+            <button onclick="location.reload()" style="padding:10px 20px; background:var(--primary-color); color:white; border:none; border-radius:5px;">मुख्य मेनू पर जाएं</button>
+        </div>
+
+        <footer>
+            <p>Powered by <strong>Success Zone</strong></p>
+        </footer>
+    </div>
+
+    <script src="Tentrepreneurship.js"></script>
+    <script src="Teconomy.js"></script>
+    <script src="Topportunity.js"></script>
+    <script src="Tplanning.js"></script>
+    <script src="Tmarketing.js"></script>
+    <script src="Taccounting.js"></script>
+    <script src="Tlegal.js"></script>
+    <script src="Tfinance.js"></script>
+    <script src="Tsoftskills.js"></script>
+    <script src="Tdigital.js"></script>
+    <script src="Tfinal.js"></script>
+    <script src="Tapp.js"></script>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./Tsw.js')
+                    .then(reg => console.log('Success Zone Service Worker: Registered'))
+                    .catch(err => console.log('Service Worker: Error', err));
+            });
+        }
+    </script>
+    
+</body>
+</html>
