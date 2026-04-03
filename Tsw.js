@@ -2,7 +2,7 @@
    Offline functionality with Cache
 */
 
-const CACHE_NAME = 'sz-tec-v2'; // वर्जन बढ़ा दिया ताकि नया कोड लोड हो सके
+const CACHE_NAME = 'sz-tec-v1'; // वर्जन बढ़ा दिया ताकि नया कोड लोड हो सके
 const assets = [
     './',
     './index.html',
