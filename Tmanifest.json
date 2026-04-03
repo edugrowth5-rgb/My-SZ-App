@@ -1,0 +1,24 @@
+{
+  "short_name": "Success Zone",
+  "name": "Success Zone - TEC Exam Prep",
+  "description": "CSC TEC Certification Exam Preparation Guide",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/color/192/education.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://img.icons8.com/color/512/education.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./Tindex.html",
+  "background_color": "#f4f7f6",
+  "display": "standalone",
+  "scope": "./",
+  "theme_color": "#2c3e50",
+  "orientation": "portrait-primary",
+  "lang": "hi"
+}
